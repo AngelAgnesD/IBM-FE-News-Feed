@@ -1,15 +1,23 @@
-const newsContainer = document.getElementById('news-container');
+let newsList = document.getElementById("newsList");
 
-const newsData = [
-  { title: "AI Revolutionizes Healthcare", description: "AI tools are improving diagnosis accuracy and patient outcomes." },
-  { title: "Climate Change Action", description: "Global efforts to reduce carbon emissions are accelerating in 2025." },
-  { title: "Tech Startups in India", description: "Indian startups are booming with innovations in AI, fintech, and education." },
-];
+function addNews() {
+  let title = document.getElementById("title").value.trim();
+  let content = document.getElementById("content").value.trim();
 
-newsContainer.innerHTML = "";
-newsData.forEach(article => {
-  const div = document.createElement("div");
-  div.classList.add("news-item");
-  div.innerHTML = `<h3>${article.title}</h3><p>${article.description}</p>`;
-  newsContainer.appendChild(div);
-});
+  if (title === "" || content === "") {
+    alert("Please enter both title and content!");
+    return;
+  }
+
+  let li = document.createElement("li");
+  li.className = "news-item";
+  li.innerHTML = `<strong>${title}</strong>`;
+  li.onclick = function() {
+    alert(content);
+  };
+
+  newsList.prepend(li);
+
+  document.getElementById("title").value = "";
+  document.getElementById("content").value = "";
+}

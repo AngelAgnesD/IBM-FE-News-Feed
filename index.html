@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IBM-FE News Feed Application</title>
+  <title>News Feed Application</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>📰 IBM-FE News Feed</h1>
-  </header>
+  <h1>📰 News Feed Application</h1>
 
-  <main id="news-container">
-    <p>Loading latest news...</p>
-  </main>
+  <div class="form">
+    <input type="text" id="title" placeholder="Enter news title">
+    <textarea id="content" placeholder="Enter news content"></textarea>
+    <button onclick="addNews()">Add News</button>
+  </div>
 
-  <footer>
-    <p>© 2025 IBM-FE News Feed | Created by Agnes D</p>
-  </footer>
+  <h2>Latest News</h2>
+  <ul id="newsList"></ul>
 
   <script src="script.js"></script>
 </body>
