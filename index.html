@@ -9,14 +9,24 @@
 <body>
   <h1>📰 News Feed Application</h1>
 
-  <div class="form">
-    <input type="text" id="title" placeholder="Enter news title">
-    <textarea id="content" placeholder="Enter news content"></textarea>
-    <button onclick="addNews()">Add News</button>
-  </div>
+  <div class="container">
+    <div class="form">
+      <input type="text" id="title" placeholder="Enter news title">
+      <textarea id="content" placeholder="Enter news content"></textarea>
+      <input type="file" id="imageInput" accept="image/*">
+      <button onclick="addNews()">Add News</button>
+    </div>
 
-  <h2>Latest News</h2>
-  <ul id="newsList"></ul>
+    <div class="news-section">
+      <ul id="newsList"></ul>
+    </div>
+
+    <div id="newsPreview" class="preview-box">
+      <img id="previewImage" src="" alt="">
+      <h2 id="previewTitle"></h2>
+      <p id="previewContent"></p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

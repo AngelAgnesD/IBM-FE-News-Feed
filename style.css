@@ -10,11 +10,17 @@ h1 {
   color: #333;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
 .form {
+  width: 30%;
   display: flex;
   flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto 20px;
 }
 
 input, textarea {
@@ -37,18 +43,43 @@ button:hover {
   background-color: #005fa3;
 }
 
+.news-section {
+  width: 30%;
+}
+
 #newsList {
   list-style: none;
   padding: 0;
-  max-width: 600px;
-  margin: auto;
 }
 
 .news-item {
   background: white;
-  padding: 15px;
+  padding: 10px;
   margin-bottom: 10px;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.news-item:hover {
+  background-color: #e8f0fe;
+}
+
+.preview-box {
+  width: 35%;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preview-box img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
 }
